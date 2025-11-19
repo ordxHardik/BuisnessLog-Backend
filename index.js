@@ -8,8 +8,7 @@ require("colors");
 const connectDb = require("./config/config");
 //dotenv config
 dotanv.config();
-//db config
-connectDb();
+// db config is not invoked here so serverless handlers can control when to connect.
 //rest object
 const app = express();
 
